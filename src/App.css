@@ -1,8 +1,63 @@
-/* App Component Styles */
+/* App/* Global App styles */
 .app {
   min-height: 100vh;
   background-color: var(--burgundy);
   overflow-x: hidden;
+}
+
+/* Developer Tools koruması */
+* {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Metin seçim engelleme */
+p, h1, h2, h3, h4, h5, h6, span, div {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+}
+
+/* Input alanları hariç */
+input, textarea, [contenteditable] {
+  user-select: text !important;
+}
+
+/* Sağ tık engelleme */
+body {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Print stilinde gizleme */
+@media print {
+  body {
+    display: none !important;
+  }
+}
+
+/* Ekran görüntüsü engelleme denemesi */
+@media screen {
+  html {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    transition: -webkit-filter 0.3s;
+  }
+}
+
+/* Developer Tools açıldığında uyarı */
+.devtools-detected {
+  filter: blur(10px) !important;
+  pointer-events: none !important;
 }
 
 /* Main content area */
