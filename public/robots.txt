@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Block sensitive areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.env
+Disallow: /secrets/

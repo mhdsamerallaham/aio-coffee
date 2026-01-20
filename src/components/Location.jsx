@@ -1,10 +1,13 @@
 import './Location.css';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Location = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="location" className="location">
       <div className="location-container">
-        <h2 className="location-title">Find Us</h2>
+        <h2 className="location-title">{t('location.title')}</h2>
         
         <div className="map-container">
           <iframe
@@ -18,15 +21,8 @@ const Location = () => {
         </div>
         
         <div className="location-info">
-          <p className="location-address">
-            Cumhuriyet, Rumeli Cd. 94/A<br />
-            34380 Şişli/İstanbul<br />
-            Türkiye
-          </p>
-          <p className="location-contact">
-            Telefon: +90 212 123 45 67<br />
-            Email: info@aiocoffee.com
-          </p>
+          <p className="location-address" dangerouslySetInnerHTML={{ __html: t('location.address') }} />
+          <p className="location-contact" dangerouslySetInnerHTML={{ __html: t('location.contact.phone') + '<br />' + t('location.contact.email') }} />
         </div>
       </div>
     </section>

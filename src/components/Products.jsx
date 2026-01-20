@@ -2,25 +2,28 @@ import './Products.css';
 import filtreImage from '../assets/images/filtre.jpg';
 import icelatteImage from '../assets/images/icelatte.jpg';
 import espressoImage from '../assets/images/espresso.jpg';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Products = () => {
+  const { t } = useLanguage();
+
   const products = [
     {
       id: 1,
-      name: 'Filtre Kahve',
-      description: 'Pürüzsüz, dengeli ve mükemmel demlenmiş',
+      name: t('products.items.filter.name'),
+      description: t('products.items.filter.description'),
       image: filtreImage
     },
     {
       id: 2,
-      name: 'Ice Latte',
-      description: 'Espresso ve soğuk sütün ferahlatıcı karışımı',
+      name: t('products.items.latte.name'),
+      description: t('products.items.latte.description'),
       image: icelatteImage
     },
     {
       id: 3,
-      name: 'Espresso',
-      description: 'Zengin, cesur ve yoğun lezzetli',
+      name: t('products.items.espresso.name'),
+      description: t('products.items.espresso.description'),
       image: espressoImage
     }
   ];
@@ -28,7 +31,7 @@ const Products = () => {
   return (
     <section id="products" className="products">
       <div className="products-container">
-        <h2 className="products-title">Favori Ürünlerimiz</h2>
+        <h2 className="products-title">{t('products.title')}</h2>
         
         <div className="products-grid">
           {products.map((product) => (

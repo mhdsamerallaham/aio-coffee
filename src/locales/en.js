@@ -39,10 +39,10 @@ export const enTranslations = {
   },
   "location": {
     "title": "Find Us",
-    "address": "123 Coffee Street<br />New York, NY 10001<br />United States",
+    "address": "Cumhuriyet, Rumeli Cd. 94/A<br />34380 Şişli/İstanbul<br />Turkey",
     "contact": {
-      "phone": "Phone: (555) 123-4567",
-      "email": "Email: hello@aiocoffee.com"
+      "phone": "Phone: +90 212 123 45 67",
+      "email": "Email: info@aiocoffee.com"
     }
   },
   "footer": {

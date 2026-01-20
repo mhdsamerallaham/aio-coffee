@@ -39,10 +39,10 @@ export const trTranslations = {
   },
   "location": {
     "title": "Bizi Bulun",
-    "address": "123 Kahve Sokağı<br />İstanbul, Türkiye 34000<br />Türkiye",
+    "address": "Cumhuriyet, Rumeli Cd. 94/A<br />34380 Şişli/İstanbul<br />Türkiye",
     "contact": {
-      "phone": "Telefon: (555) 123-4567",
-      "email": "E-posta: info@aiokahve.com"
+      "phone": "Telefon: +90 212 123 45 67",
+      "email": "Email: info@aiocoffee.com"
     }
   },
   "footer": {

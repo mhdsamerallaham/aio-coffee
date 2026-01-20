@@ -1,7 +1,10 @@
 import './Footer.css';
 import logoImage from '../assets/images/logo.png';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -10,30 +13,26 @@ const Footer = () => {
             <img src={logoImage} alt="AIO Coffee" className="footer-logo-image" />
           </div>
           <p className="footer-slogan">
-            All in One — Coffee as a Ritual
+            {t('footer.slogan')}
           </p>
         </div>
         
         <div className="footer-content">
           <div className="footer-section">
-            <h4 className="footer-section-title">Visit Us</h4>
-            <address className="footer-address">
-              123 Coffee Street<br />
-              New York, NY 10001<br />
-              United States
-            </address>
+            <h4 className="footer-section-title">{t('footer.visit')}</h4>
+            <address className="footer-address" dangerouslySetInnerHTML={{ __html: t('location.address') }} />
           </div>
           
           <div className="footer-section">
-            <h4 className="footer-section-title">Contact</h4>
+            <h4 className="footer-section-title">{t('footer.contact')}</h4>
             <div className="footer-contact">
-              <p>Phone: (555) 123-4567</p>
-              <p>Email: hello@aiocoffee.com</p>
+              <p dangerouslySetInnerHTML={{ __html: t('location.contact.phone') }} />
+              <p dangerouslySetInnerHTML={{ __html: t('location.contact.email') }} />
             </div>
           </div>
           
           <div className="footer-section">
-            <h4 className="footer-section-title">Follow</h4>
+            <h4 className="footer-section-title">{t('footer.follow')}</h4>
             <div className="footer-social">
               <a href="#" className="social-link" aria-label="Instagram">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -56,7 +55,7 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © 2024 AIO Coffee. All rights reserved.
+            {t('footer.copyright')}
           </p>
         </div>
       </div>
