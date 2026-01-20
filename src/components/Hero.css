@@ -1,0 +1,194 @@
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Video background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(74, 11, 18, 0.7);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Commented out gradient placeholder */
+/*
+.hero-video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    var(--burgundy-dark) 0%, 
+    var(--burgundy) 25%, 
+    var(--burgundy-light) 50%, 
+    var(--burgundy) 75%, 
+    var(--burgundy-dark) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+*/
+
+/* Dark burgundy overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(74, 11, 18, 0.7);
+  z-index: 2;
+}
+
+/* Content container */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.hero-content.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Title styling */
+.hero-title {
+  color: var(--cream);
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Subtitle styling */
+.hero-subtitle {
+  color: var(--soft-gray);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  margin: 0;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .hero-content {
+    padding: 20px 15px;
+    max-width: 90%;
+  }
+  
+  .hero-title {
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 100vh;
+    min-height: 500px;
+  }
+  
+  .hero-content {
+    padding: 15px 10px;
+    max-width: 95%;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+}
+
+/* Ensure video covers properly on all screen sizes */
+@media (max-aspect-ratio: 16/9) {
+  .hero-video {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .hero-video {
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+  }
+}

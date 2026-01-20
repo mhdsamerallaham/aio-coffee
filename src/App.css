@@ -1,0 +1,59 @@
+/* App Component Styles */
+.app {
+  min-height: 100vh;
+  background-color: var(--burgundy);
+  overflow-x: hidden;
+}
+
+/* Main content area */
+main {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Smooth scroll behavior for the entire app */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure sections don't overlap with fixed header */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Loading state for images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
