@@ -17,11 +17,17 @@
 }
 
 .footer-logo {
-  color: var(--cream);
-  font-size: 2.5rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo-image {
+  height: 50px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
 }
 
 .footer-slogan {
@@ -126,8 +132,9 @@
     margin-bottom: 30px;
   }
   
-  .footer-logo {
-    font-size: 2rem;
+  .footer-logo-image {
+    height: 40px;
+    max-width: 120px;
   }
   
   .footer-slogan {
@@ -177,8 +184,9 @@
     margin-bottom: 25px;
   }
   
-  .footer-logo {
-    font-size: 1.8rem;
+  .footer-logo-image {
+    height: 35px;
+    max-width: 100px;
   }
   
   .footer-slogan {
@@ -217,8 +225,9 @@
     margin-bottom: 20px;
   }
   
-  .footer-logo {
-    font-size: 1.6rem;
+  .footer-logo-image {
+    height: 30px;
+    max-width: 85px;
   }
   
   .footer-slogan {

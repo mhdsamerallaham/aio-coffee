@@ -1,12 +1,17 @@
 import './Footer.css';
+import logoImage from '../assets/images/logo.png';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <h3 className="footer-logo">AIO</h3>
-          <p className="footer-slogan">All in One — Coffee as a Ritual</p>
+          <div className="footer-logo">
+            <img src={logoImage} alt="AIO Coffee" className="footer-logo-image" />
+          </div>
+          <p className="footer-slogan">
+            All in One — Coffee as a Ritual
+          </p>
         </div>
         
         <div className="footer-content">

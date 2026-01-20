@@ -32,9 +32,22 @@
 
 /* Logo styling */
 .nav-logo {
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.header.scrolled .logo-image {
+  height: 35px;
+  max-width: 100px;
 }
 
 .logo-text {
@@ -136,10 +149,14 @@
   }
   
   .nav-logo {
-    font-size: 1.5rem;
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
+  }
+  
+  .logo-image {
+    height: 35px;
+    max-width: 100px;
   }
   
   .nav-links {
@@ -166,8 +183,12 @@
   }
   
   .nav-logo {
-    font-size: 1.3rem;
     margin-bottom: 8px;
+  }
+  
+  .logo-image {
+    height: 30px;
+    max-width: 85px;
   }
   
   .nav-links {

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import logoImage from '../assets/images/logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -26,7 +27,7 @@ const Header = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <nav className="nav">
         <div className="nav-logo">
-          <span className="logo-text">AIO</span>
+          <img src={logoImage} alt="AIO Coffee" className="logo-image" />
         </div>
         
         <ul className="nav-links">
