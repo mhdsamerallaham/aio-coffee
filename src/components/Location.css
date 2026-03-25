@@ -76,6 +76,21 @@
   margin-bottom: 0;
 }
 
+.location-address-link {
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.location-address-link:hover {
+  opacity: 0.75;
+}
+
+.location-address-link:hover .location-address {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .location {

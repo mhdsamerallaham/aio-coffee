@@ -3,7 +3,7 @@ export const enTranslations = {
     "home": "Home",
     "about": "About",
     "products": "Products",
-    "location": "Location"
+    "location": "Find Us"
   },
   "hero": {
     "title": "Coffee as a Ritual",
@@ -33,16 +33,16 @@ export const enTranslations = {
       },
       "espresso": {
         "name": "Espresso",
-        "description": "Rich, bold, and intensely flavorful"
+        "description": "Rich, bold, and intensely aromatic"
       }
     }
   },
   "location": {
     "title": "Find Us",
-    "address": "Cumhuriyet, Rumeli Cd. 94/A<br />34380 Şişli/İstanbul<br />Turkey",
+    "address": "Cumhuriyet, Rumeli Cd. 94/A<br />34380 Şişli/İstanbul",
     "contact": {
-      "phone": "Phone: +90 212 123 45 67",
-      "email": "Email: info@aiocoffee.com"
+      "phone": "Phone: 0212 233 36 33",
+      "email": "Email: hello@aiocoffee.com"
     }
   },
   "footer": {
@@ -50,7 +50,7 @@ export const enTranslations = {
     "visit": "Visit Us",
     "contact": "Contact",
     "follow": "Follow",
-    "copyright": "© 2024 AIO Coffee. All rights reserved."
+    "copyright": "© 2025 AIO Coffee. All rights reserved."
   },
   "language": {
     "switch": "Türkçe"

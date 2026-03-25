@@ -80,6 +80,21 @@
   margin: 0;
 }
 
+.footer-address-link {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+}
+
+.footer-address-link:hover {
+  opacity: 0.75;
+}
+
+.footer-address-link:hover .footer-address {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .footer-contact p {
   color: var(--text-muted);
   font-size: 0.95rem;

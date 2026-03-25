@@ -3,16 +3,16 @@ export const trTranslations = {
     "home": "Ana Sayfa",
     "about": "Hakkımızda",
     "products": "Ürünlerimiz",
-    "location": "Konum"
+    "location": "Bizi Bulun"
   },
   "hero": {
     "title": "Kahve Bir Ritüeldir",
-    "subtitle": "Her fincan şu anın bilinçli bir anı haline geldiği yer"
+    "subtitle": "Her fincan, şu anın bilinçli bir anı haline geldiği yer"
   },
   "about": {
     "title": "AIO Hakkında",
     "description1": "Her kahve çekirdeğinin kalbinde anlatılmayı bekleyen bir hikaye yatar. AIO olarak, kahvenin sadece bir içecek olmadığına inanırız—o, bizi kendimize ve şu ana bağlayan bir ritüeldir.",
-    "description2": "Yolculuğumuz basit bir felsefeyle başladı: zamanın yavaşladığı, taze çekilmiş kahvenin aromasıın durup nefes almaya, anın basit güzelliğini yudumlamaya davet olduğu bir alan yaratmak.",
+    "description2": "Yolculuğumuz basit bir felsefeyle başladı: zamanın yavaşladığı, taze çekilmiş kahvenin aromasının durup nefes almaya, anın basit güzelliğini yudumlamaya davet ettiği bir alan yaratmak.",
     "description3": "Hizmet ettiğimiz her fincan, çekirdeğin dikkatli seçiminden suyun tam sıcaklığına kadar niyetle hazırlanır. Bu, mükemmelliğe olan bağlılığımız, kahve yapmanın kadim sanatına saygımız ve size sunduğumuz hediye—saf, katıksız bir varlık anı.",
     "features": {
       "feature1": "Özenle Seçilmiş Kahve Çekirdekleri",
@@ -21,7 +21,7 @@ export const trTranslations = {
     }
   },
   "products": {
-    "title": "Favori Ürünlerimiz",
+    "title": "Ürünlerimiz",
     "items": {
       "filter": {
         "name": "Filtre Kahve",
@@ -33,16 +33,16 @@ export const trTranslations = {
       },
       "espresso": {
         "name": "Espresso",
-        "description": "Zengin, cesur ve yoğun lezzetli"
+        "description": "Zengin, güçlü ve yoğun aromalı"
       }
     }
   },
   "location": {
     "title": "Bizi Bulun",
-    "address": "Cumhuriyet, Rumeli Cd. 94/A<br />34380 Şişli/İstanbul<br />Türkiye",
+    "address": "Cumhuriyet, Rumeli Cd. 94/A<br />34380 Şişli/İstanbul",
     "contact": {
-      "phone": "Telefon: +90 212 123 45 67",
-      "email": "Email: info@aiocoffee.com"
+      "phone": "Telefon: 0212 233 36 33",
+      "email": "E-posta: hello@aiocoffee.com"
     }
   },
   "footer": {
@@ -50,7 +50,7 @@ export const trTranslations = {
     "visit": "Ziyaret Edin",
     "contact": "İletişim",
     "follow": "Takip Edin",
-    "copyright": "© 2024 AIO Kahve. Tüm hakları saklıdır."
+    "copyright": "© 2025 AIO Coffee. Tüm hakları saklıdır."
   },
   "language": {
     "switch": "English"
