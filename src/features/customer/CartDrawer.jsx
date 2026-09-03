@@ -62,19 +62,21 @@ export default function CartDrawer() {
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
               {items.length > 0 && (
                 <button
                   onClick={clearCart}
-                  className="p-2 text-rose-200 hover:text-white text-xs font-bold transition-colors cursor-pointer"
+                  className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl text-rose-200 hover:text-white hover:bg-white/10 flex items-center justify-center transition-colors cursor-pointer touch-target"
                   title="Clear Cart"
+                  aria-label="Clear cart"
                 >
                   <Trash2 className="w-4 h-4" />
                 </button>
               )}
               <button
                 onClick={closeCart}
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer border border-white/20"
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer border border-white/15 touch-target"
+                aria-label="Close cart"
               >
                 <X className="w-5 h-5 text-white" />
               </button>
@@ -82,11 +84,11 @@ export default function CartDrawer() {
           </div>
 
           {/* Scrollable Body: Items + Separate Guest & Hotel Details */}
-          <div className="p-5 sm:p-6 overflow-y-auto custom-scrollbar flex-1 space-y-6">
+          <div className="p-4 sm:p-5 overflow-y-auto custom-scrollbar flex-1 space-y-5">
             {items.length > 0 ? (
               <>
                 {/* Items List */}
-                <div className="space-y-3.5">
+                <div className="space-y-3">
                   {items.map((item) => {
                     const prodName = typeof item.product.name === 'object'
                       ? item.product.name[language] || item.product.name.tr
@@ -95,20 +97,20 @@ export default function CartDrawer() {
                     return (
                       <div
                         key={item.id}
-                        className="p-4 rounded-2xl border border-stone-200/80 bg-white shadow-xs space-y-3"
+                        className="p-3.5 sm:p-4 rounded-xl border border-stone-200/90 bg-white shadow-2xs space-y-2.5"
                       >
-                        <div className="flex items-start justify-between gap-3">
-                          <div className="flex gap-3">
+                        <div className="flex items-start justify-between gap-2">
+                          <div className="flex items-center gap-3">
                             <img
                               src={item.product.image}
                               alt={prodName}
-                              className="w-14 h-14 rounded-xl object-cover border border-stone-200 shrink-0"
+                              className="w-12 h-12 rounded-lg object-cover border border-stone-200 shrink-0"
                             />
                             <div>
-                              <h4 className="text-base font-extrabold text-stone-900 font-heading">
+                              <h4 className="text-sm sm:text-base font-bold text-stone-900 font-heading leading-snug">
                                 {prodName}
                               </h4>
-                              <p className="text-xs font-black text-[#4A1525] mt-0.5">
+                              <p className="text-xs font-bold font-mono text-[#4A1525] mt-0.5">
                                 ₺{item.unitPrice}
                               </p>
                             </div>
@@ -116,16 +118,17 @@ export default function CartDrawer() {
 
                           <button
                             onClick={() => removeFromCart(item.id)}
-                            className="text-stone-400 hover:text-rose-600 p-1 transition-colors cursor-pointer"
+                            className="w-11 h-11 min-w-[44px] min-h-[44px] text-stone-400 hover:text-rose-600 rounded-lg hover:bg-rose-50 flex items-center justify-center transition-colors cursor-pointer touch-target"
+                            aria-label="Remove item"
                           >
-                            <X className="w-4 h-4" />
+                            <Trash2 className="w-4 h-4" />
                           </button>
                         </div>
 
                         {/* Modifiers Badges */}
                         <div className="flex flex-wrap gap-1.5 pt-0.5">
                           {item.selectedSize && (
-                            <span className="px-2.5 py-0.5 bg-stone-100 text-stone-700 rounded-md text-xs font-bold">
+                            <span className="px-2 py-0.5 bg-stone-100 text-stone-700 rounded-md text-[11px] font-semibold">
                               {typeof item.selectedSize.name === 'object'
                                 ? item.selectedSize.name[language] || item.selectedSize.name.tr
                                 : item.selectedSize.name}
@@ -134,34 +137,36 @@ export default function CartDrawer() {
                           {item.selectedExtras.map((e, idx) => (
                             <span
                               key={idx}
-                              className="px-2.5 py-0.5 bg-[#F8F2F4] text-[#4A1525] border border-[#4A1525]/20 rounded-md text-xs font-bold"
+                              className="px-2 py-0.5 bg-[#F8F2F4] text-[#4A1525] border border-[#4A1525]/15 rounded-md text-[11px] font-semibold"
                             >
                               + {typeof e.name === 'object' ? e.name[language] || e.name.tr : e.name}
                             </span>
                           ))}
                         </div>
 
-                        {/* Quantity Controls & Line Item Total */}
+                        {/* Quantity Controls (Guaranteed min 44x44px touch targets on ALL devices) & Line Item Total */}
                         <div className="flex items-center justify-between pt-2 border-t border-stone-100">
-                          <div className="flex items-center gap-3 bg-stone-100 p-1 rounded-xl">
+                          <div className="flex items-center gap-1 bg-stone-100 p-1 rounded-xl border border-stone-200/80">
                             <button
                               onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                              className="w-7 h-7 rounded-lg bg-white text-stone-900 flex items-center justify-center font-bold shadow-xs hover:bg-stone-50 cursor-pointer"
+                              className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-lg bg-white text-stone-800 flex items-center justify-center font-bold shadow-2xs hover:bg-stone-50 active:scale-95 cursor-pointer touch-target transition-all"
+                              aria-label="Decrease quantity"
                             >
-                              <Minus className="w-3.5 h-3.5" />
+                              <Minus className="w-4 h-4 stroke-[2.5]" />
                             </button>
-                            <span className="w-6 text-center text-sm font-black text-stone-900">
+                            <span className="w-7 text-center text-sm sm:text-base font-bold text-stone-900 font-mono select-none">
                               {item.quantity}
                             </span>
                             <button
                               onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                              className="w-7 h-7 rounded-lg bg-white text-stone-900 flex items-center justify-center font-bold shadow-xs hover:bg-stone-50 cursor-pointer"
+                              className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-lg bg-white text-stone-800 flex items-center justify-center font-bold shadow-2xs hover:bg-stone-50 active:scale-95 cursor-pointer touch-target transition-all"
+                              aria-label="Increase quantity"
                             >
-                              <Plus className="w-3.5 h-3.5" />
+                              <Plus className="w-4 h-4 stroke-[2.5]" />
                             </button>
                           </div>
 
-                          <span className="text-base font-black font-heading text-stone-900">
+                          <span className="text-base font-bold font-heading text-stone-900 font-mono">
                             ₺{item.unitPrice * item.quantity}
                           </span>
                         </div>
@@ -170,19 +175,19 @@ export default function CartDrawer() {
                   })}
                 </div>
 
-                {/* 3 Separate Inputs Section: Hotel Name, Room Number, Customer Name — Spacious & High Visibility */}
-                <div className="bg-[#F8F2F4] p-5 sm:p-6 rounded-3xl border-2 border-[#4A1525]/20 space-y-4 shadow-sm">
-                  <div className="flex items-center gap-2 pb-1 border-b border-[#4A1525]/15">
-                    <Hotel className="w-5 h-5 text-[#4A1525] shrink-0" />
-                    <h3 className="text-sm sm:text-base font-extrabold text-[#4A1525] font-heading">
+                {/* 3 Separate Inputs Section: Hotel Name, Room Number, Customer Name — 48px Height Standards */}
+                <div className="bg-[#F8F2F4]/80 p-4 sm:p-5 rounded-2xl border border-[#4A1525]/15 space-y-3.5 shadow-2xs">
+                  <div className="flex items-center gap-2 pb-1 border-b border-[#4A1525]/10">
+                    <Hotel className="w-4 h-4 text-[#4A1525] shrink-0" />
+                    <h3 className="text-xs sm:text-sm font-bold text-[#4A1525] font-heading uppercase tracking-wide">
                       {getTranslation(language, 'guestDetailsTitle')}
                     </h3>
                   </div>
 
                   {/* 1. Hotel Name Input */}
-                  <div className="space-y-1.5">
-                    <label className="text-xs sm:text-sm font-extrabold text-stone-800 flex items-center gap-2">
-                      <Hotel className="w-4 h-4 text-[#4A1525]" />
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-stone-700 flex items-center gap-1.5">
+                      <Hotel className="w-3.5 h-3.5 text-[#4A1525]" />
                       <span>{getTranslation(language, 'hotelNameLabel')}</span>
                     </label>
                     <input
@@ -190,14 +195,14 @@ export default function CartDrawer() {
                       value={hotelName}
                       onChange={(e) => setHotelName(e.target.value)}
                       placeholder={getTranslation(language, 'hotelNamePlaceholder')}
-                      className="w-full bg-white border-2 border-stone-300/80 focus:border-[#4A1525] rounded-2xl px-4 py-3 text-sm sm:text-base font-semibold text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#4A1525]/20 transition-all shadow-xs"
+                      className="w-full h-12 min-h-[48px] bg-white border border-stone-300 focus:border-[#4A1525] rounded-xl px-3.5 text-sm sm:text-base font-medium text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#4A1525]/15 transition-all shadow-2xs"
                     />
                   </div>
 
                   {/* 2. Room Number Input */}
-                  <div className="space-y-1.5">
-                    <label className="text-xs sm:text-sm font-extrabold text-stone-800 flex items-center gap-2">
-                      <DoorClosed className="w-4 h-4 text-[#4A1525]" />
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-stone-700 flex items-center gap-1.5">
+                      <DoorClosed className="w-3.5 h-3.5 text-[#4A1525]" />
                       <span>{getTranslation(language, 'roomNumberLabel')}</span>
                     </label>
                     <input
@@ -205,14 +210,14 @@ export default function CartDrawer() {
                       value={roomNumber}
                       onChange={(e) => setRoomNumber(e.target.value)}
                       placeholder={getTranslation(language, 'roomNumberPlaceholder')}
-                      className="w-full bg-white border-2 border-stone-300/80 focus:border-[#4A1525] rounded-2xl px-4 py-3 text-sm sm:text-base font-semibold text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#4A1525]/20 transition-all shadow-xs"
+                      className="w-full h-12 min-h-[48px] bg-white border border-stone-300 focus:border-[#4A1525] rounded-xl px-3.5 text-sm sm:text-base font-medium text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#4A1525]/15 transition-all shadow-2xs"
                     />
                   </div>
 
                   {/* 3. Customer Name Input */}
-                  <div className="space-y-1.5">
-                    <label className="text-xs sm:text-sm font-extrabold text-stone-800 flex items-center gap-2">
-                      <User className="w-4 h-4 text-[#4A1525]" />
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-stone-700 flex items-center gap-1.5">
+                      <User className="w-3.5 h-3.5 text-[#4A1525]" />
                       <span>{getTranslation(language, 'customerNameLabel')}</span>
                     </label>
                     <input
@@ -220,7 +225,7 @@ export default function CartDrawer() {
                       value={customerName}
                       onChange={(e) => setCustomerName(e.target.value)}
                       placeholder={getTranslation(language, 'customerNamePlaceholder')}
-                      className="w-full bg-white border-2 border-stone-300/80 focus:border-[#4A1525] rounded-2xl px-4 py-3 text-sm sm:text-base font-semibold text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#4A1525]/20 transition-all shadow-xs"
+                      className="w-full h-12 min-h-[48px] bg-white border border-stone-300 focus:border-[#4A1525] rounded-xl px-3.5 text-sm sm:text-base font-medium text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#4A1525]/15 transition-all shadow-2xs"
                     />
                   </div>
                 </div>
@@ -231,15 +236,15 @@ export default function CartDrawer() {
                 <div className="w-16 h-16 bg-[#F8F2F4] rounded-full flex items-center justify-center mx-auto text-[#4A1525]">
                   <Coffee className="w-8 h-8" />
                 </div>
-                <h3 className="text-lg font-bold text-stone-800">
+                <h3 className="text-base sm:text-lg font-bold text-stone-800 font-heading">
                   {getTranslation(language, 'emptyCartTitle')}
                 </h3>
-                <p className="text-xs text-stone-500 max-w-xs mx-auto">
+                <p className="text-xs text-stone-500 max-w-xs mx-auto leading-relaxed">
                   {getTranslation(language, 'emptyCartSubtitle')}
                 </p>
                 <button
                   onClick={closeCart}
-                  className="px-6 py-2.5 bg-[#4A1525] text-white font-bold rounded-xl text-xs shadow-md cursor-pointer"
+                  className="h-11 min-h-[44px] px-6 bg-[#4A1525] hover:bg-[#360F1B] active:bg-[#2C0D16] text-white font-bold rounded-xl text-xs sm:text-sm shadow-sm cursor-pointer touch-target transition-colors"
                 >
                   {getTranslation(language, 'browseMenu')}
                 </button>
@@ -247,14 +252,14 @@ export default function CartDrawer() {
             )}
           </div>
 
-          {/* Footer Checkout Controls — Giant Hero Button */}
+          {/* Footer Checkout Controls */}
           {items.length > 0 && (
-            <div className="p-5 sm:p-7 bg-white border-t-2 border-stone-200 space-y-4 shrink-0 shadow-2xl">
+            <div className="p-4 sm:p-5 bg-white border-t border-stone-200/90 space-y-3 shrink-0 shadow-lg">
               
               {/* Validation Warning Hint */}
               {!isFormValid && (
-                <div className="p-3.5 bg-rose-50 border-2 border-rose-300 rounded-2xl flex items-center gap-2.5 text-xs sm:text-sm font-black text-rose-950">
-                  <span className="text-lg">⚠️</span>
+                <div className="p-2.5 bg-amber-50 border border-amber-200 rounded-xl flex items-center gap-2 text-xs font-semibold text-amber-900">
+                  <span className="text-sm">⚠️</span>
                   <span>
                     {language === 'tr'
                       ? 'Lütfen Otel Adı, Oda Numarası ve Adınızı doldurun.'
@@ -264,35 +269,35 @@ export default function CartDrawer() {
               )}
 
               {/* Total Price Summary Row */}
-              <div className="flex items-center justify-between px-2">
-                <span className="text-sm font-black text-stone-500 uppercase tracking-widest font-heading">
+              <div className="flex items-center justify-between px-1">
+                <span className="text-xs font-bold text-stone-500 uppercase tracking-wider font-heading">
                   {getTranslation(language, 'totalPrice')}
                 </span>
-                <span className="text-3xl sm:text-4xl font-black font-mono text-[#4A1525]">
+                <span className="text-2xl sm:text-3xl font-black font-mono text-[#4A1525]">
                   ₺{getTotal}
                 </span>
               </div>
 
-              {/* GIANT HERO WHATSAPP CHECKOUT BUTTON */}
+              {/* Primary WhatsApp Checkout Button (Ergonomic 52px-56px height) */}
               <button
                 onClick={handleCheckout}
                 disabled={!isFormValid}
-                className={`w-full py-5 sm:py-6 px-7 sm:px-9 rounded-3xl font-black font-heading text-lg sm:text-xl md:text-2xl flex items-center justify-between transition-all press-trigger ${
+                className={`w-full h-13 sm:h-14 min-h-[52px] px-5 sm:px-6 rounded-xl font-bold font-heading text-sm sm:text-base flex items-center justify-between transition-all press-trigger ${
                   isFormValid
-                    ? 'bg-[#059669] hover:bg-[#047857] active:bg-[#065F46] text-white shadow-2xl shadow-emerald-600/40 ring-4 ring-emerald-500/30 cursor-pointer active:scale-[0.98]'
-                    : 'bg-stone-200 text-stone-400 cursor-not-allowed shadow-none border-2 border-stone-300'
+                    ? 'bg-[#059669] hover:bg-[#047857] active:bg-[#065F46] text-white shadow-md shadow-emerald-700/25 cursor-pointer active:scale-[0.99]'
+                    : 'bg-stone-200 text-stone-400 cursor-not-allowed shadow-none border border-stone-300/80'
                 }`}
                 style={{ color: isFormValid ? '#FFFFFF' : '#9CA3AF' }}
               >
-                <div className="flex items-center gap-3.5">
-                  <Send className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 stroke-[2.5] text-white" />
-                  <span className="font-black tracking-tight" style={{ color: isFormValid ? '#FFFFFF' : '#9CA3AF' }}>
+                <div className="flex items-center gap-2.5">
+                  <Send className="w-5 h-5 shrink-0 stroke-[2.2] text-white" />
+                  <span className="font-bold tracking-tight" style={{ color: isFormValid ? '#FFFFFF' : '#9CA3AF' }}>
                     {getTranslation(language, 'callWaiterOrder')}
                   </span>
                 </div>
 
-                <span className={`font-mono text-lg sm:text-2xl font-black px-4 py-1.5 rounded-2xl shadow-md ${
-                  isFormValid ? 'bg-[#047857] text-white border border-emerald-400/40' : 'bg-stone-300 text-stone-500'
+                <span className={`font-mono text-sm sm:text-base font-bold px-3 py-1 rounded-lg shadow-2xs ${
+                  isFormValid ? 'bg-[#047857] text-white border border-emerald-400/30' : 'bg-stone-300 text-stone-500'
                 }`}>
                   ₺{getTotal}
                 </span>

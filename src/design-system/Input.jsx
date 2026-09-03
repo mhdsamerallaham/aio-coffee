@@ -23,12 +23,12 @@ export default function Input({
           </div>
         )}
         <input
-          className={`w-full bg-white border border-stone-200 text-stone-900 rounded-2xl ${
-            Icon ? 'pl-12' : 'pl-4'
+          className={`w-full h-12 min-h-[48px] bg-white border border-stone-300 text-stone-900 rounded-2xl ${
+            Icon ? 'pl-11' : 'pl-4'
           } ${
-            rightAction ? 'pr-12' : 'pr-4'
-          } py-3.5 text-base placeholder:text-stone-400 focus:outline-none focus:border-amber-600 focus:ring-4 focus:ring-amber-500/10 transition-all duration-200 ${
-            error ? 'border-rose-500 focus:border-rose-500 focus:ring-rose-500/10' : ''
+            rightAction ? 'pr-11' : 'pr-4'
+          } text-sm sm:text-base placeholder:text-stone-400 focus:outline-none focus:border-[#4A1525] focus:ring-2 focus:ring-[#4A1525]/15 transition-all duration-150 shadow-2xs ${
+            error ? 'border-rose-500 focus:border-rose-500 focus:ring-rose-500/15' : 'hover:border-stone-400'
           } ${className}`}
           {...props}
         />

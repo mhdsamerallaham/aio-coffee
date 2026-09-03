@@ -65,40 +65,40 @@ export default function ProductCatalog({
 
       {/* Category Header Banner */}
       {!searchQuery && activeTab === 'menu' && localizedCategory && (
-        <div className="bg-white border border-stone-200/80 rounded-3xl p-5 sm:p-7 flex flex-col md:flex-row md:items-center justify-between gap-5 shadow-xs">
-          <div className="flex items-center gap-4 sm:gap-5">
-            <span className="text-3xl sm:text-4xl p-3.5 sm:p-4 bg-[#4A1525]/10 border border-[#4A1525]/20 rounded-2xl shrink-0">
+        <div className="bg-white border border-stone-200/80 rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4 shadow-2xs">
+          <div className="flex items-center gap-3.5 sm:gap-4">
+            <span className="w-12 h-12 sm:w-14 sm:h-14 bg-[#F8F2F4] border border-[#4A1525]/15 rounded-2xl flex items-center justify-center text-2xl sm:text-3xl shrink-0">
               {localizedCategory.icon}
             </span>
             <div>
-              <div className="flex items-center gap-3">
-                <h2 className="text-page-header text-stone-900">
+              <div className="flex items-center gap-2.5">
+                <h2 className="text-lg sm:text-2xl font-extrabold font-heading text-stone-900 leading-tight">
                   {localizedCategory.name}
                 </h2>
                 {localizedCategory.badge && (
-                  <span className="px-3 py-1 bg-[#4A1525] text-white text-xs font-extrabold rounded-lg uppercase tracking-wider">
+                  <span className="px-2.5 py-0.5 bg-[#4A1525] text-white text-[10px] sm:text-xs font-bold rounded-md uppercase tracking-wider">
                     {localizedCategory.badge}
                   </span>
                 )}
               </div>
-              <p className="text-body-md text-stone-600 mt-1">
+              <p className="text-xs sm:text-sm text-stone-500 font-medium mt-0.5 line-clamp-1 sm:line-clamp-none">
                 {localizedCategory.subtitle || 'Handcrafted premium hotel lounge offerings'}
               </p>
             </div>
           </div>
 
-          <div className="shrink-0 flex items-center gap-2 bg-[#F8F2F4] border border-[#4A1525]/15 px-4 py-2.5 rounded-2xl">
-            <Coffee className="w-5 h-5 text-[#4A1525]" />
-            <span className="text-sm font-extrabold text-[#4A1525]">
+          <div className="shrink-0 self-start md:self-auto flex items-center gap-2 bg-[#F8F2F4] border border-[#4A1525]/15 px-3.5 py-1.5 rounded-xl">
+            <Coffee className="w-4 h-4 text-[#4A1525]" />
+            <span className="text-xs sm:text-sm font-bold text-[#4A1525]">
               {products.length} {getTranslation(language, 'items')}
             </span>
           </div>
         </div>
       )}
 
-      {/* Product Cards Grid — 2 columns per row as requested */}
+      {/* Product Cards Grid — 2 columns mobile, 3 tablet, 4 desktop */}
       {products.length > 0 ? (
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
           {products.map((product) => (
             <ProductCard
               key={product.id}

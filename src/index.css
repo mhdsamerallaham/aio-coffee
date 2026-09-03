@@ -47,33 +47,33 @@
    Base Reset & Scalable 2026 Typography
    ═══════════════════════════════════════════ */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-html {
-  scroll-behavior: smooth;
-  -webkit-tap-highlight-color: transparent;
-  font-size: 16px;
-}
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 16px;
+  }
 
-body {
-  font-family: var(--font-body);
-  background-color: var(--color-canvas-light);
-  color: #1C1917;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: clip;
-  line-height: 1.6;
-}
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-canvas-light);
+    color: #1C1917;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+    line-height: 1.6;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  line-height: 1.25;
-  color: #0C0A09;
-  letter-spacing: -0.025em;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: 1.25;
+    color: #0C0A09;
+    letter-spacing: -0.025em;
+  }
 }
 
 /* ═══════════════════════════════════════════
@@ -214,16 +214,26 @@ h1, h2, h3, h4, h5, h6 {
    ═══════════════════════════════════════════ */
 
 :root {
-  --customer-header-height: 96px;
-  --customer-category-height: 92px;
+  --customer-header-height: 72px;
+  --customer-category-height: 58px;
   --customer-total-sticky: calc(var(--customer-header-height) + var(--customer-category-height));
+  --touch-target-min: 44px;
 }
 
 @media (max-width: 640px) {
   :root {
-    --customer-header-height: 84px;
-    --customer-category-height: 84px;
+    --customer-header-height: 64px;
+    --customer-category-height: 54px;
   }
+}
+
+/* ── Interactive & Touch Utilities ── */
+.touch-target {
+  min-width: var(--touch-target-min);
+  min-height: var(--touch-target-min);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ── Customer Root Layout ── */
@@ -264,14 +274,14 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   z-index: 50;
   height: var(--customer-header-height);
-  background: rgba(250, 248, 245, 0.94);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid rgba(230, 224, 213, 0.75);
-  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.05);
+  background: rgba(250, 248, 245, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(230, 224, 213, 0.8);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
 }
 
-/* ── Customer Sticky Category Nav (High Impact & Noticeable) ── */
+/* ── Customer Sticky Category Nav ── */
 
 .customer-category-nav {
   position: sticky;
@@ -279,13 +289,12 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 40;
   height: var(--customer-category-height);
   background: rgba(253, 251, 248, 0.98);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-bottom: 2px solid rgba(74, 21, 37, 0.12);
-  border-top: 1px solid rgba(230, 224, 213, 0.8);
-  box-shadow: 0 6px 25px -4px rgba(74, 21, 37, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(230, 224, 213, 0.85);
+  box-shadow: 0 4px 16px -4px rgba(74, 21, 37, 0.06);
   display: flex;
-  items-center: center;
+  align-items: center;
 }
 
 .category-scroll-container {

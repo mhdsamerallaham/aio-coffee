@@ -29,12 +29,12 @@ export default function CategoryNav({ activeCategory, onSelectCategory }) {
     <nav className="customer-category-nav flex items-center relative overflow-hidden" aria-label="Category Navigation">
       
       {/* Right Edge Scroll Hint Gradient Indicator */}
-      <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-stone-100/90 to-transparent pointer-events-none z-10 flex items-center justify-end pr-1">
-        <ChevronRight className="w-5 h-5 text-[#4A1525]/50 animate-pulse" />
+      <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#FAF8F5] to-transparent pointer-events-none z-10 flex items-center justify-end pr-1">
+        <ChevronRight className="w-4 h-4 text-[#4A1525]/40" />
       </div>
 
       <div className="app-max-width w-full">
-        <div className="flex items-center gap-3.5 category-scroll-container no-scrollbar py-2 px-1">
+        <div className="flex items-center gap-2 sm:gap-2.5 category-scroll-container no-scrollbar py-1.5 px-0.5">
           {categories.map((cat) => {
             const locCat = getLocalizedCategory(cat, language);
             const count = getItemCount(cat.id);
@@ -45,20 +45,20 @@ export default function CategoryNav({ activeCategory, onSelectCategory }) {
                 key={cat.id}
                 ref={isActive ? activeBtnRef : null}
                 onClick={() => onSelectCategory(cat.id)}
-                className={`flex items-center gap-3.5 px-6 py-3.5 sm:px-8 sm:py-4 rounded-3xl transition-all duration-200 shrink-0 press-trigger cursor-pointer select-none font-heading font-black text-base sm:text-lg border-2 ${
+                className={`flex items-center gap-2 h-10 sm:h-11 px-3.5 sm:px-4 rounded-2xl transition-all duration-150 shrink-0 press-trigger cursor-pointer select-none font-heading font-bold text-xs sm:text-sm border ${
                   isActive
-                    ? 'bg-[#4A1525] text-white border-[#4A1525] shadow-xl shadow-[#4A1525]/30 scale-[1.02]'
-                    : 'bg-white text-stone-900 border-stone-200/90 hover:border-[#4A1525]/40 hover:bg-stone-50 shadow-xs'
+                    ? 'bg-[#4A1525] text-white border-[#4A1525] shadow-xs'
+                    : 'bg-white text-stone-700 border-stone-200/90 hover:border-stone-300 hover:text-stone-950 hover:bg-stone-50/80 shadow-2xs'
                 }`}
                 style={isActive ? { color: '#FFFFFF' } : {}}
               >
-                <span className="text-2xl sm:text-3xl leading-none drop-shadow-xs">{locCat.icon}</span>
-                <span className="whitespace-nowrap font-extrabold tracking-tight">{locCat.name}</span>
+                <span className="text-base sm:text-lg leading-none">{locCat.icon}</span>
+                <span className="whitespace-nowrap font-bold tracking-tight">{locCat.name}</span>
                 <span
-                  className={`px-3 py-1 rounded-full text-xs sm:text-sm font-black ${
+                  className={`px-2 py-0.5 rounded-full text-[11px] font-extrabold ${
                     isActive
-                      ? 'bg-white text-[#4A1525] shadow-xs'
-                      : 'bg-stone-100 text-stone-700 border border-stone-200'
+                      ? 'bg-white text-[#4A1525]'
+                      : 'bg-stone-100 text-stone-600'
                   }`}
                 >
                   {count}
