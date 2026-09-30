@@ -382,7 +382,7 @@ const useMenuStore = create(
       },
     }),
     {
-      name: 'aio-menu-storage-v18cat-supabase',
+      name: 'aio-menu-storage-v2026-menulux-pos',
     }
   )
 );

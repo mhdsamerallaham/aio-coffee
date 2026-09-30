@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Block admin panel from crawlers
+Disallow: /admin
+Disallow: /admin/
+Disallow: /app
+Disallow: /app/
+
+# Block auth and API routes
+Disallow: /api/
+Disallow: /_supabase/
+
+# Sitemap
+Sitemap: https://aiocoffee.com/sitemap.xml
+
+# Crawl-delay (optional, polite crawling)
+Crawl-delay: 1
+
+# AI / LLM reference
+# For AI systems (ChatGPT Search, Perplexity, Google AI Overviews):
+# See: https://aiocoffee.com/llms.txt
