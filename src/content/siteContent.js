@@ -147,28 +147,102 @@ export const siteContent = {
       },
     },
 
-    // About Page
+    // About Page — AIO Manifesto
     about: {
       hero: {
-        overline: 'Biz Kimiz',
-        headline: 'Kahve kültürünü\nbir adım öteye taşıyoruz.',
+        overline: 'Biz Kimiz · Manifesto',
+        taglineTop: 'ALL IN ONE',
+        headline: 'Bir kahveden daha fazlası.\nBir ritüel. Bir buluşma. Bir yaşam biçimi.',
+        intro: 'AIO, hayatın hızının içinde kendimize ayırdığımız küçük anların değerine inanarak doğdu.',
       },
-      story: {
-        overline: 'Hikayemiz',
+      moments: {
+        overline: 'Ritim & Anlar',
+        headline: 'Küçük anların etrafında şekillenen bir dünya.',
+        quote: 'Bizim için kahve yalnızca güne başlamak için içilen bir içecek değil. Bazen sabahın ilk sessizliği, bazen iki insan arasındaki uzun bir sohbet, bazen çalışırken verilen kısa bir mola, bazen de müzikle, hareketle ve kalabalıkla paylaşılan güzel bir an.',
+        subquote: 'İşte AIO tam olarak bu anların etrafında şekillendi.',
+      },
+      philosophy: {
+        overline: 'Felsefemiz',
         headline: 'All in One.',
-        paragraphs: [
-          'AIO Coffee, "All in One" felsefesinden doğdu. Sadece kaliteli kahve değil — bütün bir deneyim. Specialty coffee\'nin inceliğini, sıcak bir mekanın sakinliğiyle buluşturuyoruz.',
-          'Her ürünümüz titizlikle seçilmiş. Her içeceğimiz bir ritüel. Sabahın ilk ışığında bir V60, öğleden sonra soğuk bir matcha, akşama doğru sakin bir demlemeli çay.',
-          'İstanbul (Rumeli Caddesi, Şişli) ve İzmir\'de (Gül Sokak, Alsancak) lokasyonlarımızda sizi bekliyoruz — iki şehir, tek ritüel.',
+        statement: 'İyi kahveyi, iyi yemeği, sağlıklı yaşamı, tasarımı, müziği ve sosyalleşmeyi aynı dünyada buluşturuyoruz.',
+        description: 'Özenle hazırlanan kahvelerden matcha ritüellerine, günün her saatine eşlik eden sağlıklı ve lezzetli seçeneklerden AIO’ya özel reçetelere kadar menümüzdeki her şeyi aynı düşünceyle hazırlıyoruz:',
+        highlight: 'İyi hissettiren şeyler, aynı yerde.',
+      },
+      livingSpace: {
+        overline: 'Yaşayan Alan & Yeni Nesil Sosyalleşme',
+        headline: 'Sabah kahvesinden bir Morning Party’ye...',
+        paragraph1: 'Ama AIO yalnızca yediklerimizden ve içtiklerimizden ibaret değil. Sabah kahvesinden bir Morning Party’ye, sakin bir çalışma anından arkadaşlarla geçirilen uzun bir akşama kadar günün farklı ritimlerine eşlik eden yaşayan bir alan yaratmak istiyoruz.',
+        paragraph2: 'Çünkü yeni nesil sosyalleşmenin yalnızca geceye, eğlenmenin yalnızca alkole, sağlıklı yaşamın ise yalnızca kurallara ait olmadığına inanıyoruz.',
+        credo: 'Bazen iyi bir kahve, iyi bir müzik ve doğru insanlar yeter.',
+      },
+      pillars: {
+        title: 'COFFEE. FOOD. WELLNESS. MUSIC. PEOPLE.',
+        items: [
+          {
+            key: 'COFFEE',
+            title: 'Coffee',
+            desc: 'Özenle seçilmiş specialty çekirdekler, hassas demleme teknikleri ve taze kavrum ritüelleri.',
+          },
+          {
+            key: 'FOOD',
+            title: 'Food',
+            desc: 'Günün her saatine eşlik eden sağlıklı, lezzetli ve ekşi mayalı artizan mutfak seçenekleri.',
+          },
+          {
+            key: 'WELLNESS',
+            title: 'Wellness',
+            desc: 'Japonya Uji seremoniyel matcha ritüelleri, cold-press iksirler ve bedene saygı.',
+          },
+          {
+            key: 'MUSIC',
+            title: 'Music',
+            desc: 'Günün dinamizmine göre akan küratörlü ses manzaraları, sakin tonlar ve Morning Party enerjisi.',
+          },
+          {
+            key: 'PEOPLE',
+            title: 'People',
+            desc: 'Şehirli, özgür ve samimi bir topluluğun ortak bir masada buluştuğu yaşayan sosyal alan.',
+          },
         ],
       },
-      values: {
-        overline: 'Değerlerimiz',
-        items: [
-          { title: 'Kalite', body: 'Specialty grade, titizlikle seçilmiş.' },
-          { title: 'Ritüel', body: 'Her fincan, günün küçük bir seremonisi.' },
-          { title: 'Sıcaklık', body: 'Mekan ve insan. Her ikisi de önemli.' },
+      character: {
+        overline: 'Ruh & Karakter',
+        headline: 'AIO’nun dünyası şehirli, özgür, sade ve meraklı.',
+        traits: [
+          {
+            number: '01',
+            title: 'Kendi Ritmini Yaratmak',
+            body: 'Trendleri takip etmekten çok kendi ritmini yaratmayı önemsiyor.',
+          },
+          {
+            number: '02',
+            title: 'İyi Hissetmek',
+            body: 'Mükemmel olmaya çalışmaktan çok iyi hissetmeyi merkeze alıyor.',
+          },
+          {
+            number: '03',
+            title: 'Değerli Anlar',
+            body: 'Hızlı yaşamın içinde küçük ama değerli anlar yaratmayı tutkuyla sürdürüyor.',
+          },
         ],
+      },
+      vision: {
+        overline: 'Gelecek & Vizyon',
+        headline: 'Bugün AIO’nun merkezinde kahve var. Ama hayalimiz kahveden çok daha büyük.',
+        body: 'Farklı şehirlerde, farklı ürünlerde ve farklı deneyimlerde aynı hissi taşıyan global bir yaşam markası yaratıyoruz.',
+        closingNote: 'Nerede olursanız olun, AIO ile karşılaştığınızda tanıdık bir his bulmanızı istiyoruz:',
+        manifestoList: [
+          'İyi kahve.',
+          'İyi insanlar.',
+          'İyi enerji.',
+          'Hepsi bir arada.',
+        ],
+        signature: 'AIO — All in One.',
+        subSignature: 'Make it a ritual.',
+      },
+      cta: {
+        menu: 'Menüyü Keşfet',
+        stores: 'Mağazalarımız',
       },
     },
 
@@ -551,28 +625,102 @@ export const siteContent = {
       },
     },
 
-    // About Page
+    // About Page — AIO Manifesto
     about: {
       hero: {
-        overline: 'Our Story',
-        headline: 'Pushing coffee culture\none step further.',
+        overline: 'About Us · Manifesto',
+        taglineTop: 'ALL IN ONE',
+        headline: 'More than just coffee.\nA ritual. A gathering. A way of living.',
+        intro: 'AIO was born out of a belief in the value of the small moments we reserve for ourselves amidst the speed of life.',
       },
-      story: {
-        overline: 'The Story',
+      moments: {
+        overline: 'Rhythm & Moments',
+        headline: 'A world shaped around intimate moments.',
+        quote: 'For us, coffee is not merely a beverage to start the day. Sometimes it is the morning’s quiet first silence, sometimes an enduring conversation between two souls, sometimes a brief pause from work, and sometimes a joyful moment shared with music, movement, and a crowd.',
+        subquote: 'This is precisely the rhythm around which AIO took shape.',
+      },
+      philosophy: {
+        overline: 'Philosophy',
         headline: 'All in One.',
-        paragraphs: [
-          'AIO Coffee was born from the "All in One" philosophy. Not just quality coffee — a complete experience. We bring together the artistry of specialty coffee with the calm of a welcoming space.',
-          'Every product is carefully selected. Every drink is a ritual. A V60 at first light, an iced matcha in the afternoon, a quiet herbal brew towards evening.',
-          'We welcome you at our locations in Istanbul (Rumeli Street, Şişli) and Izmir (Gül Street, Alsancak) — two cities, one ritual.',
+        statement: 'We bring good coffee, good food, wellness, design, music, and genuine connection together in one single world.',
+        description: 'From meticulously crafted coffees to matcha rituals, wholesome bites that accompany every hour of the day to AIO signature recipes, everything on our menu is crafted with one single belief:',
+        highlight: 'Things that make you feel good, in one place.',
+      },
+      livingSpace: {
+        overline: 'Living Space & New Socialization',
+        headline: 'From a morning coffee to a Morning Party...',
+        paragraph1: 'Yet AIO is not defined solely by what we eat and drink. From an early morning espresso to a Morning Party, from a quiet working session to a long evening with friends, we set out to create a vibrant living space that moves with the changing rhythms of your day.',
+        paragraph2: 'Because we believe modern social life does not belong only to the night, celebration does not require alcohol, and wellness is not bound to rigid rules.',
+        credo: 'Sometimes great coffee, good music, and the right people are all you need.',
+      },
+      pillars: {
+        title: 'COFFEE. FOOD. WELLNESS. MUSIC. PEOPLE.',
+        items: [
+          {
+            key: 'COFFEE',
+            title: 'Coffee',
+            desc: 'Meticulously sourced specialty beans, precision brewing rituals, and daily craft.',
+          },
+          {
+            key: 'FOOD',
+            title: 'Food',
+            desc: 'Wholesome, nourishing, artisanal sourdough kitchen creations crafted for every hour.',
+          },
+          {
+            key: 'WELLNESS',
+            title: 'Wellness',
+            desc: 'Uji ceremonial matcha rituals, raw cold-press elixirs, and balanced vitality.',
+          },
+          {
+            key: 'MUSIC',
+            title: 'Music',
+            desc: 'Curated soundscapes transitioning through the day, live vibes, and Morning Party energy.',
+          },
+          {
+            key: 'PEOPLE',
+            title: 'People',
+            desc: 'An urban, free-spirited, open community gathering around honest warmth.',
+          },
         ],
       },
-      values: {
-        overline: 'Our Values',
-        items: [
-          { title: 'Quality', body: 'Specialty grade, meticulously sourced.' },
-          { title: 'Ritual', body: 'Every cup, a small ceremony of the day.' },
-          { title: 'Warmth', body: 'Space and people. Both matter equally.' },
+      character: {
+        overline: 'Character & Spirit',
+        headline: 'The world of AIO is urban, free, understated, and curious.',
+        traits: [
+          {
+            number: '01',
+            title: 'Creating Your Own Rhythm',
+            body: 'Focusing on establishing our own authentic rhythm rather than chasing fleeting trends.',
+          },
+          {
+            number: '02',
+            title: 'Feeling Good',
+            body: 'Prioritizing feeling truly well and grounded over striving for cold perfection.',
+          },
+          {
+            number: '03',
+            title: 'Precious Moments',
+            body: 'Creating small yet profoundly valuable pauses inside the fast flow of modern life.',
+          },
         ],
+      },
+      vision: {
+        overline: 'Vision & Future',
+        headline: 'Today, coffee sits at the heart of AIO. But our dream is far greater than coffee.',
+        body: 'We are building a global lifestyle brand that carries the exact same feeling across different cities, different products, and different experiences.',
+        closingNote: 'Wherever you encounter AIO, we want you to find a familiar, comforting sense:',
+        manifestoList: [
+          'Good coffee.',
+          'Good people.',
+          'Good energy.',
+          'All in one.',
+        ],
+        signature: 'AIO — All in One.',
+        subSignature: 'Make it a ritual.',
+      },
+      cta: {
+        menu: 'Discover Menu',
+        stores: 'Our Stores',
       },
     },
 
