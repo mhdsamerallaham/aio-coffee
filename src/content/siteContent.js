@@ -454,6 +454,138 @@ export const siteContent = {
       },
     },
 
+    // Privacy Policy / Gizlilik İlkesi & KVKK
+    privacy: {
+      overline: 'Yasal Bilgilendirme & Güvenlik',
+      headline: 'Gizlilik İlkesi ve KVKK Aydınlatma Metni',
+      subtitle: 'AIO Coffee olarak kişisel verilerinizin gizliliğini ve güvenliğini en yüksek standartlarda koruyoruz. Veri işleme süreçlerimiz, haklarınız ve çerez politikamız hakkında detaylı bilgilendirme.',
+      lastUpdated: 'Son Güncelleme: 1 Ekim 2026',
+      badge: 'KVKK & GDPR Standartlarıyla Uyumlu',
+      quickNavTitle: 'İçindekiler',
+      highlights: [
+        {
+          title: 'Uçtan Uca Güvenlik',
+          desc: 'Tüm dijital kanallarımızda 256-bit SSL şifreleme ve güvenli sunucu protokolleri uygulanır.',
+          icon: 'ShieldCheck',
+        },
+        {
+          title: 'Ticari Paylaşım Yok',
+          desc: 'Verileriniz reklam veya pazarlama maksadıyla asla üçüncü kişi veya kurumlara satılmaz.',
+          icon: 'EyeOff',
+        },
+        {
+          title: 'Şeffaf Veri Yönetimi',
+          desc: 'Yalnızca sipariş, rezervasyon ve başvuru süreçlerinin gerektirdiği minimum veri işlenir.',
+          icon: 'FileText',
+        },
+        {
+          title: 'Tam Denetim ve Haklar',
+          desc: 'Verilerinize erişme, güncelleme veya silinmesini talep etme hakkınız her an saklıdır.',
+          icon: 'UserCheck',
+        },
+      ],
+      sections: [
+        {
+          id: 'veri-sorumlusu',
+          title: '1. Veri Sorumlusu ve Kapsam',
+          paragraphs: [
+            '6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") ve ilgili mevzuat uyarınca; AIO Coffee (All in One Coffee A.Ş.), veri sorumlusu sıfatıyla hareket etmektedir.',
+            'Bu Gizlilik İlkesi ve Aydınlatma Metni; Şişli / İstanbul ve Alsancak / İzmir mağazalarımızı ziyaret eden konuklarımızı, aiocoffee.com internet sitemizi ve QR dijital menü uygulamamızı kullanan tüm ziyaretçilerimizi kapsamaktadır.',
+          ],
+        },
+        {
+          id: 'toplanan-veriler',
+          title: '2. İşlenen Kişisel Verileriniz',
+          paragraphs: [
+            'Hizmetlerimizi en yüksek kalitede sunabilmek adına yalnızca gerekli olan sınırlı veriler işlenmektedir:',
+          ],
+          bullets: [
+            'Kimlik ve İletişim Bilgileri: Ad, soyad, e-posta adresi, telefon numarası (İletişim formları, franchise ön başvurusu ve kariyer formları aracılığıyla).',
+            'Sipariş ve Hizmet Bilgileri: Masa numarası, otel oda numarası, sipariş edilen ürünler, sipariş notları ve servis tercihleri.',
+            'Dijital İşlem Güvenliği Verileri: IP adresi, tarayıcı ve cihaz modeli, oturum açma süreleri, tıklama ve gezinme verileri.',
+            'Ödeme ve Finansal Güvenlik: Kredi kartı ve ödeme işlemleriniz doğrudan lisanslı PCI-DSS sertifikalı ödeme altyapısı üzerinden gerçekleştirilir. AIO Coffee sunucularında kart bilgisi saklanmaz.',
+          ],
+        },
+        {
+          id: 'isleme-amaclari',
+          title: '3. Kişisel Verilerin İşlenme Amaçları ve Hukuki Sebepler',
+          paragraphs: [
+            'Kişisel verileriniz, KVKK\'nın 5. ve 6. maddelerinde belirtilen şartlara uygun olarak aşağıdaki amaçlarla işlenir:',
+          ],
+          bullets: [
+            'Siparişlerin eksiksiz hazırlanması, masanıza veya otel odanıza güvenle servis edilmesi,',
+            'Franchise ortaklığı taleplerinin incelenmesi ve değerlendirme sürecinin yürütülmesi,',
+            'Barista ve operasyon ekibi iş başvurularının İnsan Kaynakları tarafından değerlendirilmesi,',
+            'Müşteri talep, öneri ve geri bildirimlerinin süratle yanıtlanması,',
+            'Dijital platformlarımızın performansının, hızının ve güvenliğinin optimize edilmesi,',
+            'Yetkili kamu kurum ve kuruluşlarına yasal bildirim yükümlülüklerinin yerine getirilmesi.',
+          ],
+        },
+        {
+          id: 'cerez-politikasi',
+          title: '4. Çerezler (Cookies) ve Yerel Depolama İlkeleri',
+          paragraphs: [
+            'İnternet sitemizde ve dijital menümüzde kullanıcı deneyiminizi kolaylaştırmak amacıyla minimum düzeyde çerez ve yerel tarayıcı depolama (Local Storage) mekanizmaları kullanılır:',
+          ],
+          bullets: [
+            'Zorunlu Çerezler: Dil seçiminiz (TR/EN) ve dijital sipariş sepetinizin korunması için elzem olan teknik çerezlerdir.',
+            'Performans ve Analiz: Sayfaların yüklenme hızını artırmak ve site trafiğini anonim istatistiklerle izlemek için kullanılan verilerdir.',
+            'Kullanıcı Tercihi: Tarayıcı ayarlarınız üzerinden çerez kullanımını dilediğiniz zaman sınırlandırabilir veya tamamen temizleyebilirsiniz.',
+          ],
+        },
+        {
+          id: 'veri-aktarimi',
+          title: '5. Verilerin Aktarımı ve Paylaşım Politikası',
+          paragraphs: [
+            'Kişisel verileriniz hiçbir surette ticari kazanç, reklam ve doğrudan pazarlama hedeflemesi amacıyla üçüncü taraflarla paylaşılmaz veya devredilmez.',
+            'Verileriniz yalnızca yasal zorunluluklar çerçevesinde yetkili adli/idari makamlara ve hizmetin yürütülmesi için teknik zorunluluk arz eden güvenli altyapı sağlayıcılarımıza (bulut sunucu ve SMS/e-posta bildirim sistemleri) KVKK hükümleri doğrultusunda aktarılabilir.',
+          ],
+        },
+        {
+          id: 'saklama-ve-imha',
+          title: '6. Veri Saklama Süreleri ve Güvenlik Tedbirleri',
+          paragraphs: [
+            'Verileriniz, işlenme amacının gerektirdiği yasal saklama süreleri boyunca güvenli şifreleme ve erişim yetkilendirme standartlarıyla korunur.',
+            'Yasal sürelerin sona ermesi veya işleme gerekçesinin ortadan kalkması durumunda veriler, KVKK Yönetmeliği\'ne uygun biçimde periyodik imha süreçlerinde güvenle silinir, yok edilir veya anonimleştirilir.',
+          ],
+        },
+        {
+          id: 'kvkk-haklar',
+          title: '7. KVKK 11. Madde Kapsamındaki Yasal Haklarınız',
+          paragraphs: [
+            'KVKK\'nın 11. maddesi uyarınca her ilgili kişi aşağıdaki haklara sahiptir:',
+          ],
+          bullets: [
+            'Kişisel verilerinizin işlenip işlenmediğini öğrenme,',
+            'İşlenmişse buna ilişkin bilgi talep etme,',
+            'İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,',
+            'Yurt içinde veya yurt dışında verilerin aktarıldığı üçüncü kişileri bilme,',
+            'Verilerin eksik veya yanlış işlenmiş olması halinde düzeltilmesini isteme,',
+            'Kanunun 7. maddesinde öngörülen şartlar çerçevesinde verilerin silinmesini veya yok edilmesini talep etme,',
+            'Düzeltme, silme ve yok etme işlemlerinin verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,',
+            'İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme,',
+            'Kanuna aykırı işleme sebebiyle zarara uğramanız halinde zararın giderilmesini talep etme.',
+          ],
+        },
+        {
+          id: 'iletisim-ve-basvuru',
+          title: '8. Başvuru Usulü ve İletişim',
+          paragraphs: [
+            'Yukarıda belirtilen haklarınızı kullanmak, veri işleme süreçlerimiz hakkında sorularınızı iletmek veya taleplerinizi bildirmek için bizimle dilediğiniz zaman iletişime geçebilirsiniz:',
+          ],
+          contactInfo: {
+            company: 'AIO Coffee (All In One Specialty Coffee)',
+            email: 'info@aiocoffee.com',
+            stores: [
+              'İstanbul: Cumhuriyet Mah. Rumeli Cad. No: 94A, Şişli / İstanbul',
+              'İzmir: Gül Sokak (1382. Sk.), Alsancak, Konak / İzmir',
+            ],
+            note: 'Talepleriniz, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ uyarınca en geç 30 (otuz) gün içerisinde ücretsiz olarak sonuçlandırılacaktır.',
+          },
+        },
+      ],
+    },
+
     // Footer
     footer: {
       tagline: 'Specialty coffee, her gün bir ritüel.',
@@ -465,6 +597,7 @@ export const siteContent = {
         { label: 'Blog', href: '/tr/blog' },
         { label: 'Kariyer', href: '/tr/kariyer' },
         { label: 'İletişim', href: '/tr/iletisim' },
+        { label: 'Gizlilik İlkesi', href: '/tr/gizlilik-politikasi' },
       ],
       stores: [
         {
@@ -932,6 +1065,137 @@ export const siteContent = {
       },
     },
 
+    // Privacy Policy / Data Protection
+    privacy: {
+      overline: 'Legal & Privacy Policy',
+      headline: 'Privacy Policy & Data Protection Notice',
+      subtitle: 'At AIO Coffee, safeguarding your personal data and upholding your digital privacy is our foremost priority. Discover how we protect your data across our stores and digital experience.',
+      lastUpdated: 'Last Updated: October 1, 2026',
+      badge: 'KVKK & GDPR Compliant Standards',
+      quickNavTitle: 'Table of Contents',
+      highlights: [
+        {
+          title: 'End-to-End Security',
+          desc: 'All digital platforms operate under 256-bit SSL encryption and strict server security controls.',
+          icon: 'ShieldCheck',
+        },
+        {
+          title: 'Zero Third-Party Sale',
+          desc: 'Your personal data is never sold, leased, or monetized with advertising third parties.',
+          icon: 'EyeOff',
+        },
+        {
+          title: 'Transparent Processing',
+          desc: 'We collect only the essential data necessary to fulfill orders, inquiries, and applications.',
+          icon: 'FileText',
+        },
+        {
+          title: 'Full User Control',
+          desc: 'You maintain continuous legal rights to review, update, or erase your information at any time.',
+          icon: 'UserCheck',
+        },
+      ],
+      sections: [
+        {
+          id: 'data-controller',
+          title: '1. Data Controller & Scope',
+          paragraphs: [
+            'In accordance with applicable data protection legislation including the Turkish Personal Data Protection Law No. 6698 ("KVKK") and international GDPR benchmarks, AIO Coffee acts as the Data Controller.',
+            'This Privacy Policy applies to all guests visiting our retail stores in Şişli / Istanbul and Alsancak / Izmir, as well as visitors using aiocoffee.com and our QR digital menu experience.',
+          ],
+        },
+        {
+          id: 'collected-data',
+          title: '2. Personal Data We Collect',
+          paragraphs: [
+            'To ensure premium hospitality and seamless ordering, we collect strictly minimal and relevant categories of data:',
+          ],
+          bullets: [
+            'Identity & Contact Details: Full name, email address, phone number (submitted via contact forms, franchise inquiries, and career applications).',
+            'Order & Service Data: Table number, hotel room number, beverage & food selections, ritual notes, and delivery preferences.',
+            'Technical & Browsing Data: IP address, browser type, device information, session metrics, and essential navigation cookies.',
+            'Payment Security: Payment transactions are processed directly via certified PCI-DSS Level 1 payment gateways. No payment card numbers are ever stored on AIO Coffee servers.',
+          ],
+        },
+        {
+          id: 'purposes',
+          title: '3. Legal Grounds and Purposes of Processing',
+          paragraphs: [
+            'Your personal information is processed strictly within lawful purposes:',
+          ],
+          bullets: [
+            'Preparing artisanal coffee and culinary orders, delivering directly to your table or guest room,',
+            'Reviewing franchise partnership inquiries and prospective franchisee evaluations,',
+            'Processing barista and hospitality applications by our Human Resources department,',
+            'Resolving customer feedback, inquiries, and customer service requests,',
+            'Maintaining optimal performance, speed, and cybersecurity on our digital platforms,',
+            'Complying with statutory and regulatory obligations under applicable laws.',
+          ],
+        },
+        {
+          id: 'cookies',
+          title: '4. Cookies & Local Storage Practices',
+          paragraphs: [
+            'Our platform employs minimal cookie and browser local storage mechanisms to deliver a seamless user experience:',
+          ],
+          bullets: [
+            'Essential Cookies: Necessary for remembering language preferences (TR/EN) and preserving digital order basket contents.',
+            'Performance & Analytics: Anonymous metrics to optimize page load speeds and overall digital menu responsiveness.',
+            'Cookie Management: You may disable, block, or clear cookies at any time via your browser settings.',
+          ],
+        },
+        {
+          id: 'data-sharing',
+          title: '5. Data Sharing & Third Parties',
+          paragraphs: [
+            'We never sell, rent, or distribute personal data to third parties for commercial or behavioral advertising.',
+            'Data may only be disclosed to judicial or regulatory bodies upon lawful request, or to vetted technical infrastructure providers (such as encrypted cloud hosting and transactional messaging) strictly to execute our services.',
+          ],
+        },
+        {
+          id: 'retention',
+          title: '6. Retention and Safe Disposal',
+          paragraphs: [
+            'Data is securely retained only for the duration required by statutory retention periods or necessary to fulfill service objectives.',
+            'Once retention grounds lapse, personal records are securely deleted, irreversibly anonymized, or destroyed in accordance with KVKK protocols.',
+          ],
+        },
+        {
+          id: 'user-rights',
+          title: '7. Your Rights Under KVKK & International Privacy Standards',
+          paragraphs: [
+            'Under Article 11 of the KVKK (and corresponding international privacy regulations), you are entitled to:',
+          ],
+          bullets: [
+            'Inquire whether your personal data is being processed,',
+            'Request information regarding details of processing if such processing exists,',
+            'Learn the purpose of processing and verify adherence to stated objectives,',
+            'Know third parties to whom personal data is transferred domestically or abroad,',
+            'Demand correction of incomplete or inaccurate records,',
+            'Request deletion or erasure of personal data under statutory conditions,',
+            'Object to any detrimental result produced solely by automated decision-making systems,',
+            'Claim compensation for damages incurred as a result of unlawful processing.',
+          ],
+        },
+        {
+          id: 'contact',
+          title: '8. How to Contact Us and Exercise Your Rights',
+          paragraphs: [
+            'To exercise any of your privacy rights or submit questions regarding data handling practices, please contact our team directly:',
+          ],
+          contactInfo: {
+            company: 'AIO Coffee (All In One Specialty Coffee)',
+            email: 'info@aiocoffee.com',
+            stores: [
+              'Istanbul: Cumhuriyet Mah. Rumeli Cad. No: 94A, Şişli / Istanbul',
+              'Izmir: Gül Street (1382. St.), Alsancak, Konak / Izmir',
+            ],
+            note: 'Your requests will be reviewed and answered free of charge within a maximum of 30 days as prescribed by law.',
+          },
+        },
+      ],
+    },
+
     // Footer
     footer: {
       tagline: 'Specialty coffee, every day a ritual.',
@@ -943,6 +1207,7 @@ export const siteContent = {
         { label: 'Blog', href: '/en/blog' },
         { label: 'Careers', href: '/en/careers' },
         { label: 'Contact', href: '/en/contact' },
+        { label: 'Privacy Policy', href: '/en/privacy-policy' },
       ],
       stores: [
         {

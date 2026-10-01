@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Coffee, Clock, BellRing, Hotel } from 'lucide-react';
 import useLanguageStore from '../../store/languageStore';
 
@@ -50,7 +51,16 @@ export default function CustomerFooter() {
 
         {/* Bottom Copyright & Credit Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white font-heading">
-          <p className="text-white font-medium">© 2026 AIO Coffee. All rights reserved.</p>
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+            <p className="text-white font-medium">© 2026 AIO Coffee. All rights reserved.</p>
+            <span className="text-white/40 hidden sm:inline">·</span>
+            <Link
+              to={language === 'tr' ? '/tr/gizlilik-politikasi' : '/en/privacy-policy'}
+              className="text-white/80 hover:text-white underline underline-offset-2 transition-colors"
+            >
+              {language === 'tr' ? 'Gizlilik İlkesi' : 'Privacy Policy'}
+            </Link>
+          </div>
           <p className="font-extrabold text-white tracking-wide">
             Made by <a href="https://samer.life" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-rose-200 transition-colors">samer.life</a>
           </p>

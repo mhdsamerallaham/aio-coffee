@@ -13,6 +13,7 @@ const BlogPage    = lazy(() => import('./pages/brand/BlogPage'));
 const CareerPage  = lazy(() => import('./pages/brand/CareerPage'));
 const ContactPage = lazy(() => import('./pages/brand/ContactPage'));
 const FranchisePage = lazy(() => import('./pages/brand/FranchisePage'));
+const PrivacyPage = lazy(() => import('./pages/brand/PrivacyPage'));
 
 // Digital Menu App (existing)
 import AppShell from './app/AppShell';
@@ -79,6 +80,10 @@ export default function App() {
           <Route path="/franchise" element={<Navigate to="/tr/franchise" replace />} />
           <Route path="/contact" element={<Navigate to="/tr/iletisim" replace />} />
           <Route path="/iletisim" element={<Navigate to="/tr/iletisim" replace />} />
+          <Route path="/privacy" element={<Navigate to="/tr/gizlilik-politikasi" replace />} />
+          <Route path="/gizlilik" element={<Navigate to="/tr/gizlilik-politikasi" replace />} />
+          <Route path="/gizlilik-ilkesi" element={<Navigate to="/tr/gizlilik-politikasi" replace />} />
+          <Route path="/gizlilik-politikasi" element={<Navigate to="/tr/gizlilik-politikasi" replace />} />
 
           {/* ── Turkish routes ── */}
           <Route path="/tr"               element={<HomePage />} />
@@ -89,7 +94,11 @@ export default function App() {
           <Route path="/tr/blog"          element={<BlogPage />} />
           <Route path="/tr/kariyer"       element={<CareerPage />} />
           <Route path="/tr/iletisim"      element={<ContactPage />} />
+          <Route path="/tr/gizlilik-politikasi" element={<PrivacyPage />} />
           {/* Turkish path aliases */}
+          <Route path="/tr/gizlilik-ilkesi" element={<Navigate to="/tr/gizlilik-politikasi" replace />} />
+          <Route path="/tr/privacy"        element={<Navigate to="/tr/gizlilik-politikasi" replace />} />
+          <Route path="/tr/privacy-policy" element={<Navigate to="/tr/gizlilik-politikasi" replace />} />
           <Route path="/tr/about"         element={<Navigate to="/tr/biz-kimiz" replace />} />
           <Route path="/tr/stores"        element={<Navigate to="/tr/magazalar" replace />} />
           <Route path="/tr/contact"       element={<Navigate to="/tr/iletisim" replace />} />
@@ -104,7 +113,11 @@ export default function App() {
           <Route path="/en/blog"          element={<BlogPage />} />
           <Route path="/en/careers"       element={<CareerPage />} />
           <Route path="/en/contact"       element={<ContactPage />} />
+          <Route path="/en/privacy-policy" element={<PrivacyPage />} />
           {/* English path aliases */}
+          <Route path="/en/privacy"       element={<Navigate to="/en/privacy-policy" replace />} />
+          <Route path="/en/gizlilik-politikasi" element={<Navigate to="/en/privacy-policy" replace />} />
+          <Route path="/en/gizlilik-ilkesi" element={<Navigate to="/en/privacy-policy" replace />} />
           <Route path="/en/biz-kimiz"     element={<Navigate to="/en/about" replace />} />
           <Route path="/en/magazalar"     element={<Navigate to="/en/stores" replace />} />
           <Route path="/en/kariyer"       element={<Navigate to="/en/careers" replace />} />

@@ -15,6 +15,8 @@ const routeMap = {
   '/tr/blog': '/en/blog',
   '/tr/kariyer': '/en/careers',
   '/tr/iletisim': '/en/contact',
+  '/tr/gizlilik-politikasi': '/en/privacy-policy',
+  '/tr/gizlilik-ilkesi': '/en/privacy-policy',
   '/en': '/tr',
   '/en/about': '/tr/biz-kimiz',
   '/en/stores': '/tr/magazalar',
@@ -23,6 +25,8 @@ const routeMap = {
   '/en/blog': '/tr/blog',
   '/en/careers': '/tr/kariyer',
   '/en/contact': '/tr/iletisim',
+  '/en/privacy-policy': '/tr/gizlilik-politikasi',
+  '/en/privacy': '/tr/gizlilik-politikasi',
 };
 
 export default function SiteFooter() {
@@ -274,10 +278,20 @@ export default function SiteFooter() {
         style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '1.5rem', paddingBottom: '1.5rem' }}
       >
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="type-label" style={{ color: 'rgba(255,255,255,0.2)' }}>
-            {t.legal}
-          </p>
-          <p className="type-label" style={{ color: 'rgba(255,255,255,0.12)' }}>
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-2">
+            <p className="type-label" style={{ color: 'rgba(255,255,255,0.3)' }}>
+              {t.legal}
+            </p>
+            <span style={{ color: 'rgba(255,255,255,0.15)' }} aria-hidden="true">•</span>
+            <Link
+              to={lang === 'tr' ? '/tr/gizlilik-politikasi' : '/en/privacy-policy'}
+              className="type-label hover:text-white transition-colors underline decoration-white/20 underline-offset-4"
+              style={{ color: 'rgba(255,255,255,0.45)' }}
+            >
+              {lang === 'tr' ? 'Gizlilik İlkesi & KVKK' : 'Privacy Policy & KVKK'}
+            </Link>
+          </div>
+          <p className="type-label" style={{ color: 'rgba(255,255,255,0.15)' }}>
             All in One.
           </p>
         </div>

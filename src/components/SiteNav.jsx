@@ -17,6 +17,8 @@ const routeMap = {
   '/tr/blog': '/en/blog',
   '/tr/kariyer': '/en/careers',
   '/tr/iletisim': '/en/contact',
+  '/tr/gizlilik-politikasi': '/en/privacy-policy',
+  '/tr/gizlilik-ilkesi': '/en/privacy-policy',
   '/en': '/tr',
   '/en/about': '/tr/biz-kimiz',
   '/en/stores': '/tr/magazalar',
@@ -25,6 +27,8 @@ const routeMap = {
   '/en/blog': '/tr/blog',
   '/en/careers': '/tr/kariyer',
   '/en/contact': '/tr/iletisim',
+  '/en/privacy-policy': '/tr/gizlilik-politikasi',
+  '/en/privacy': '/tr/gizlilik-politikasi',
 };
 
 function MenuIcon({ open }) {

@@ -147,4 +147,22 @@
     <lastmod>2026-09-30</lastmod>
   </url>
 
+  <!-- ── PRIVACY POLICY / GİZLİLİK İLKESİ ── -->
+  <url>
+    <loc>https://aiocoffee.com/tr/gizlilik-politikasi</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aiocoffee.com/tr/gizlilik-politikasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiocoffee.com/en/privacy-policy"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://aiocoffee.com/en/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aiocoffee.com/tr/gizlilik-politikasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiocoffee.com/en/privacy-policy"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+
 </urlset>
