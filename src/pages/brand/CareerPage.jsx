@@ -6,6 +6,8 @@ import useLangStore from '../../store/langStore';
 import { getContent } from '../../content/siteContent';
 import SiteNav from '../../components/SiteNav';
 import SiteFooter from '../../components/SiteFooter';
+import SeoHead from '../../components/seo/SeoHead';
+import { getSeoMetadata } from '../../content/seoContent';
 import { useReveal } from '../../lib/useReveal';
 
 const WHY_ITEMS = {
@@ -60,6 +62,7 @@ export default function CareerPage() {
   const [activeFilter, setActiveFilter] = useState('all');
   const content = getContent(lang);
   const t = content.career;
+  const seo = getSeoMetadata(lang === 'tr' ? 'career' : 'careers', lang);
 
   const headerRef = useReveal();
   const whyRef = useReveal();
@@ -68,6 +71,9 @@ export default function CareerPage() {
 
   return (
     <div style={{ background: '#FAF8F5', minHeight: '100vh' }}>
+      {/* ── Dynamic SEO & GEO Meta Tags ── */}
+      <SeoHead {...seo} lang={lang} />
+
       <SiteNav theme="dark" />
 
       {/* ── Hero ── */}

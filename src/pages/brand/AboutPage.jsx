@@ -8,6 +8,8 @@ import useLangStore from '../../store/langStore';
 import { getContent } from '../../content/siteContent';
 import SiteNav from '../../components/SiteNav';
 import SiteFooter from '../../components/SiteFooter';
+import SeoHead from '../../components/seo/SeoHead';
+import { getSeoMetadata } from '../../content/seoContent';
 import SpotlightCard from '../../components/motion/SpotlightCard';
 import Magnetic from '../../components/motion/Magnetic';
 import InView from '../../components/motion/InView';
@@ -18,6 +20,7 @@ export default function AboutPage() {
   const { lang } = useLangStore();
   const content = getContent(lang);
   const t = content.about;
+  const seo = getSeoMetadata('about', lang);
   const prefix = lang === 'tr' ? '/tr' : '/en';
   const menuHref = `${prefix}/menu`;
   const storesHref = lang === 'tr' ? '/tr/magazalar' : '/en/stores';
@@ -36,6 +39,9 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#0C0A09] selection:bg-[#4A1525] selection:text-white">
+      {/* ── Dynamic SEO & GEO Meta Tags ── */}
+      <SeoHead {...seo} lang={lang} />
+
       {/* ── Fixed Navigation Header ── */}
       <SiteNav theme="dark" />
 

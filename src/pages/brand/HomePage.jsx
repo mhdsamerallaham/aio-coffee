@@ -9,6 +9,8 @@ import useLangStore from '../../store/langStore';
 import { getContent } from '../../content/siteContent';
 import SiteNav from '../../components/SiteNav';
 import SiteFooter from '../../components/SiteFooter';
+import SeoHead from '../../components/seo/SeoHead';
+import { getSeoMetadata } from '../../content/seoContent';
 
 // Motion & UI Design System Components
 import TextReveal from '../../components/motion/TextReveal';
@@ -276,6 +278,7 @@ export default function HomePage() {
   const signature = content.signature;
   const experience = content.experience;
   const stores = content.stores;
+  const seo = getSeoMetadata('home', lang);
 
   const [activeCategory, setActiveCategory] = useState('all');
 
@@ -302,6 +305,9 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#0C0A09] selection:bg-[#4A1525] selection:text-white">
+      {/* ── Dynamic SEO & GEO Meta Tags ── */}
+      <SeoHead {...seo} lang={lang} />
+
       {/* ── Dynamic Island Header ── */}
       <SiteNav theme="dark" />
 
@@ -356,23 +362,24 @@ export default function HomePage() {
                 </span>
               </motion.div>
 
-              {/* Main Headline with TextReveal entrance */}
-              <div className="mb-6">
+              {/* Main Headline with TextReveal entrance — Single Semantic H1 */}
+              <h1 className="mb-6 font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight leading-[0.96] text-white">
                 <TextReveal
-                  as="h1"
+                  as="span"
                   delay={0.1}
-                  className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight leading-[0.96] text-white"
+                  className="inline-block"
                 >
                   {t.headline1}
                 </TextReveal>
+                <br />
                 <TextReveal
-                  as="div"
+                  as="span"
                   delay={0.3}
-                  className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light italic tracking-tight leading-[0.96] text-[#E2829E] mt-1"
+                  className="inline-block italic text-[#E2829E] mt-1"
                 >
                   {t.headline2}
                 </TextReveal>
-              </div>
+              </h1>
 
               {/* Editorial Subline & Description */}
               <motion.p

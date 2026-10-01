@@ -8,6 +8,8 @@ import useLangStore from '../../store/langStore';
 import { getContent } from '../../content/siteContent';
 import SiteNav from '../../components/SiteNav';
 import SiteFooter from '../../components/SiteFooter';
+import SeoHead from '../../components/seo/SeoHead';
+import { getSeoMetadata } from '../../content/seoContent';
 import { useReveal } from '../../lib/useReveal';
 
 // Menu categories for brand showcase
@@ -157,6 +159,7 @@ export default function MenuPage() {
   const { lang } = useLangStore();
   const content = getContent(lang);
   const t = content.menuPage;
+  const seo = getSeoMetadata('menu', lang);
   const prefix = lang === 'tr' ? '/tr' : '/en';
   const storesHref = lang === 'tr' ? '/tr/magazalar' : '/en/stores';
 
@@ -167,6 +170,9 @@ export default function MenuPage() {
 
   return (
     <div style={{ background: '#FAF8F5', minHeight: '100vh' }}>
+      {/* ── Dynamic SEO & GEO Meta Tags ── */}
+      <SeoHead {...seo} lang={lang} />
+
       <SiteNav theme="light" />
 
       {/* ── Page Header ── */}

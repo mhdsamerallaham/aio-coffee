@@ -6,12 +6,15 @@ import useLangStore from '../../store/langStore';
 import { getContent } from '../../content/siteContent';
 import SiteNav from '../../components/SiteNav';
 import SiteFooter from '../../components/SiteFooter';
+import SeoHead from '../../components/seo/SeoHead';
+import { getSeoMetadata } from '../../content/seoContent';
 import { useReveal } from '../../lib/useReveal';
 
 export default function ContactPage() {
   const { lang } = useLangStore();
   const content = getContent(lang);
   const t = content.contact;
+  const seo = getSeoMetadata('contact', lang);
   const stores = content.stores?.locations || [];
 
   const ref = useReveal();
@@ -19,6 +22,9 @@ export default function ContactPage() {
 
   return (
     <div style={{ background: '#FAF8F5', minHeight: '100vh' }}>
+      {/* ── Dynamic SEO & GEO Meta Tags ── */}
+      <SeoHead {...seo} lang={lang} />
+
       <SiteNav theme="light" />
 
       {/* ── Header ── */}

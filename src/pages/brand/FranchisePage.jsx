@@ -8,6 +8,8 @@ import { motion } from 'framer-motion';
 import useLangStore from '../../store/langStore';
 import SiteNav from '../../components/SiteNav';
 import SiteFooter from '../../components/SiteFooter';
+import SeoHead from '../../components/seo/SeoHead';
+import { getSeoMetadata } from '../../content/seoContent';
 
 // Motion & UI Design System
 import TextReveal from '../../components/motion/TextReveal';
@@ -201,6 +203,7 @@ const WA_TARGET_DEST = '905326668654';
 
 export default function FranchisePage() {
   const { lang } = useLangStore();
+  const seo = getSeoMetadata('franchise', lang);
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -282,6 +285,9 @@ export default function FranchisePage() {
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#0C0A09] selection:bg-[#4A1525] selection:text-white">
+      {/* ── Dynamic SEO & GEO Meta Tags ── */}
+      <SeoHead {...seo} lang={lang} />
+
       {/* ── Dynamic Island Navigation ── */}
       <SiteNav theme="dark" />
 

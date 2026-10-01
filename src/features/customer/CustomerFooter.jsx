@@ -61,8 +61,17 @@ export default function CustomerFooter() {
               {language === 'tr' ? 'Gizlilik İlkesi' : 'Privacy Policy'}
             </Link>
           </div>
-          <p className="font-extrabold text-white tracking-wide">
-            Made by <a href="https://samer.life" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-rose-200 transition-colors">samer.life</a>
+          <p className="text-white/60 tracking-wide text-xs">
+            <a
+              href="https://www.samer.life/"
+              target="_blank"
+              rel="nofollow noopener"
+              title="Developer Portfolio"
+              style={{ color: 'inherit', textDecoration: 'none' }}
+              className="hover:text-white transition-colors"
+            >
+              Built by
+            </a>
           </p>
         </div>
 

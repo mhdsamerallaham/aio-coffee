@@ -20,6 +20,8 @@ import useLangStore from '../../store/langStore';
 import { getContent } from '../../content/siteContent';
 import SiteNav from '../../components/SiteNav';
 import SiteFooter from '../../components/SiteFooter';
+import SeoHead from '../../components/seo/SeoHead';
+import { getSeoMetadata } from '../../content/seoContent';
 
 const iconMap = {
   ShieldCheck: ShieldCheck,
@@ -32,26 +34,8 @@ export default function PrivacyPage() {
   const { lang } = useLangStore();
   const content = getContent(lang);
   const t = content.privacy;
+  const seo = getSeoMetadata('privacy', lang);
   const [activeSection, setActiveSection] = useState(t.sections?.[0]?.id || 'veri-sorumlusu');
-
-  // Dynamic SEO title & description
-  useEffect(() => {
-    const titleText =
-      lang === 'tr'
-        ? 'Gizlilik İlkesi ve KVKK Aydınlatma Metni — AIO Coffee'
-        : 'Privacy Policy & Data Protection — AIO Coffee';
-    document.title = titleText;
-
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        lang === 'tr'
-          ? 'AIO Coffee Gizlilik İlkesi ve KVKK Aydınlatma Metni. Kişisel verilerinizin işlenmesi, korunması ve çerez politikamıza dair tüm detaylar.'
-          : 'AIO Coffee Privacy Policy and Data Protection Notice. Information on personal data processing, security, cookies, and your legal rights.'
-      );
-    }
-  }, [lang]);
 
   // Track active section on scroll
   useEffect(() => {
@@ -83,6 +67,9 @@ export default function PrivacyPage() {
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#0C0A09] selection:bg-[#4A1525] selection:text-white">
+      {/* ── Dynamic SEO & GEO Meta Tags ── */}
+      <SeoHead {...seo} lang={lang} />
+
       {/* ── Navigation ── */}
       <SiteNav theme="light" />
 

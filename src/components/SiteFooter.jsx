@@ -290,6 +290,17 @@ export default function SiteFooter() {
             >
               {lang === 'tr' ? 'Gizlilik İlkesi & KVKK' : 'Privacy Policy & KVKK'}
             </Link>
+            <span style={{ color: 'rgba(255,255,255,0.15)' }} aria-hidden="true">•</span>
+            <a
+              href="https://www.samer.life/"
+              target="_blank"
+              rel="nofollow noopener"
+              title="Developer Portfolio"
+              className="type-label hover:text-white transition-colors"
+              style={{ color: 'inherit', textDecoration: 'none', opacity: 0.45 }}
+            >
+              Built by
+            </a>
           </div>
           <p className="type-label" style={{ color: 'rgba(255,255,255,0.15)' }}>
             All in One.
