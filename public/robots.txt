@@ -61,6 +61,7 @@ Disallow: /app/
 
 # ── XML Sitemaps ──
 Sitemap: https://aiocoffee.com/sitemap.xml
+Sitemap: https://www.aiocoffee.com/sitemap.xml
 
 # ── LLM / AI Context File ──
 # For AI models, search agents and citation engines:
